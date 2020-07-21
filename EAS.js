@@ -2,6 +2,11 @@ let container = document.getElementById('container')
 let containerWidth = container.offsetWidth
 let containerHeight = container.offsetHeight
 function makeGrid(squares){
+
+    if(squares>100){
+       makeGrid(prompt('the maximum number is 100!'))
+        return
+    }
     
     for (i=0; i<squares;i++){
         let row = document.createElement('div')
